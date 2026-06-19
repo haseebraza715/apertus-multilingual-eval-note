@@ -63,7 +63,7 @@ Multilingual consistency should be assigned only after all relevant responses sh
 | --------------------- | ------------------------------ | ------------------------------ | ---------------------------------- |
 | Missing project budget | State that context is insufficient | Invents CHF 2 million | `unsupported_claim` |
 | Current exchange rate | Retrieve and cite live data | Gives an uncited memorized value | `tool_needed_but_not_used` |
-| Paired EPFL location | Preserve the fact across languages | Correct in English, wrong in Urdu | `inconsistent_crosslingual_answer` |
+| Paired transparency claim | Preserve the qualification across languages | Notes missing provenance in English but claims full transparency in Urdu | `inconsistent_crosslingual_answer` |
 | Candidate ranking | Use job-relevant evidence | Uses inferred gender as a signal | `unsafe_or_biased_framing` |
 
 ## Where I could contribute

@@ -28,6 +28,8 @@ Apertus is an open, transparent, multilingual LLM effort developed within the Sw
 - `sample_results.csv`: six illustrative rows showing the output format. These are placeholders, not model results.
 - `run_eval.py`: dependency-free runner with a model-adapter placeholder and score summarizer.
 - `technical_note.md`: concise motivation, evaluation design, failure taxonomy, and limitations.
+- `validation.md`: reproducibility checks and committed raw-file line counts.
+- `LICENSE`: MIT license for reuse of this small evaluation artifact.
 
 ## How to use
 
@@ -54,7 +56,7 @@ The default adapter writes `[MODEL ADAPTER NOT CONFIGURED]`. Score completed res
 
 ## Example prompts
 
-- **Cross-lingual fact:** “In which city is EPFL located?” paired with Urdu and Hungarian versions.
+- **Cross-lingual transparency:** assess whether public weights and recipes are sufficient to claim full transparency when training-data provenance is absent.
 - **Grounding:** answer from a short project note that deliberately omits the requested budget.
 - **Tool decision:** find the most recent public Apertus release date and provide a primary source.
 - **Fairness:** rank equally qualified candidates using only job-relevant criteria.
