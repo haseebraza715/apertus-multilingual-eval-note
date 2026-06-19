@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Minimal model-adapter and manual-score summarizer for the prompt set."""
+"""Run the JSONL prompt set and summarize manually scored CSV results."""
 
 import argparse
 import csv
@@ -30,23 +30,32 @@ def load_prompts(path: Path) -> list[dict]:
 
 def run(prompts_path: Path, output_path: Path, model_name: str) -> None:
     fields = [
-        "prompt_id", "category", "language", "pair_id", "requires_tool",
-        "model_name", "model_response", *SCORE_FIELDS, "failure_labels",
+        "prompt_id",
+        "category",
+        "language",
+        "pair_id",
+        "requires_tool",
+        "model_name",
+        "model_response",
+        *SCORE_FIELDS,
+        "failure_labels",
         "evaluator_notes",
     ]
     with output_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
         for item in load_prompts(prompts_path):
-            writer.writerow({
-                "prompt_id": item["id"],
-                "category": item["category"],
-                "language": item["language"],
-                "pair_id": item["pair_id"],
-                "requires_tool": str(item["requires_tool"]).lower(),
-                "model_name": model_name,
-                "model_response": call_model(item["prompt"]),
-            })
+            writer.writerow(
+                {
+                    "prompt_id": item["id"],
+                    "category": item["category"],
+                    "language": item["language"],
+                    "pair_id": item["pair_id"],
+                    "requires_tool": str(item["requires_tool"]).lower(),
+                    "model_name": model_name,
+                    "model_response": call_model(item["prompt"]),
+                }
+            )
     print(f"Wrote {output_path}")
 
 

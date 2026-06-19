@@ -63,7 +63,7 @@ The default adapter writes `[MODEL ADAPTER NOT CONFIGURED]`. Score completed res
 
 `hallucinated_fact`, `unsupported_claim`, `language_drift`, `over_refusal`, `under_refusal`, `bad_uncertainty`, `tool_needed_but_not_used`, `inconsistent_crosslingual_answer`, `unsafe_or_biased_framing`, and `incomplete_answer`.
 
-## My fit and possible contribution
+## Fit and possible contribution
 
 I am Haseeb Raza, a Computer Science BSc student at ELTE. With ETH Zurich's Agentic Systems Lab, I work on evidence extraction, rubric-based evaluation, and quality gates for scientific workflows. At Infineon, I work on multilingual LLM automation and structured extraction. At ELTE RC2S2, I contribute to responsible-AI and bias evaluation through structured experiments.
 
